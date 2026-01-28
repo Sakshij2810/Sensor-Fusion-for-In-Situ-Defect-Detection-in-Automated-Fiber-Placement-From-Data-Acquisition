@@ -946,7 +946,7 @@ body {
   display: inline-block;
   padding: 0.875rem 2rem;
   background: linear-gradient(135deg, #bf3425 0%, #9d2a1e 100%);
-  color: #ffffff;
+  color: #ffffff !important;
   font-family: "Archivo", sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -1405,6 +1405,22 @@ section {
   max-width: 950px;
   margin-top: 0;
   position: relative;
+}
+
+.afp-categories::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50px;
+  right: 50px;
+  height: 2px;
+  background-color: #cbd5e1;
+}
+
+@media (max-width: 768px) {
+  .afp-categories::before {
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -3431,12 +3447,12 @@ section {
 .pipeline-stage {
   display: flex;
   align-items: center;
+  justify-content: center;
   width: 100%;
   gap: 16px;
 }
-
 .pipeline-stage-box {
-  flex: 1;
+  width: 100%;
   max-width: 280px;
   background-color: #ffffff;
   border-radius: 12px;
@@ -4563,7 +4579,7 @@ section {
 /* Status Badge */
 .status-badge {
   position: absolute;
-  right: -120px;
+  right: -40px;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
