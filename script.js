@@ -1359,3 +1359,7 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
 })();
+
+document.querySelector(".mobile-nav-toggle")?.addEventListener("click", () => {
+  document.querySelector(".blog-sidebar").classList.toggle("active");
+});
